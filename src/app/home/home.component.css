@@ -1,0 +1,19 @@
+.botao-link {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-size: 24px;
+    color: #5C3A21;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .botao-link:hover {
+    color: #A0522D;
+  }
+  
+  .links {
+    pointer-events: auto;
+  }
+  

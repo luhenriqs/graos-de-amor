@@ -1,16 +1,15 @@
 <header>
-  <h1>Grãos de Amor ☕</h1>
+  <img src="/Logo oficial.png" alt="Grãos de Amor" style="height: 120px;" />
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Sobre</a>
-    <a href="#">Cardápio</a>
-    <a href="#">Contato</a>
+    <a routerLink="/">Home</a>
+    <a routerLink="/sobre-nos">Sobre</a>
+    <a routerLink="/cardapio">Cardápio</a>
+    <a routerLink="/cadastro">Contato</a>
   </nav>
 </header>
 
 <main>
-  <h2>Bem-vindo ao melhor café artesanal da cidade!</h2>
-  <p>Desfrute de aromas, sabores e momentos especiais.</p>
+  <router-outlet></router-outlet>
 </main>
 
 <footer>
