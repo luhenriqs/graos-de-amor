@@ -1,6 +1,11 @@
 <div class="links">
-    <a routerLink="/cadastro">Cadastro</a>
-    <a routerLink="/cardapio">Cardápio</a>
-    <a routerLink="/sobre-nos">Sobre Nós</a>
-  </div>
-  
+  <a [routerLink]="['/cadastro']">
+    <img src="/assets/Cadastro.png" alt="Cadastro" class="menu-image">
+  </a>
+  <a [routerLink]="['/cardapio']">
+    <img src="/assets/Cardapio.jpeg" alt="Cardápio" class="menu-image">
+  </a>
+  <a [routerLink]="['/sobre']">
+    <img src="/assets/img-sobrenos.jpeg" alt="Sobre Nós" class="menu-image">
+  </a>
+</div>
