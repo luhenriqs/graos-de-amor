@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-<<<<<<< HEAD
   selector: 'app-home',
   standalone: true,
   template: `
@@ -17,10 +16,5 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-=======
-  selector: 'app-cadastro',
-  standalone: true,
-  template: `<h1>Página de Cadastro</h1>`,
->>>>>>> e48320c739815a3dacc8aab3dc42f5ac4f4fc015
 })
 export class CadastroComponent {}
