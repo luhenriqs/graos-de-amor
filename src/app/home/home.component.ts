@@ -1,26 +1,20 @@
 import { Component } from '@angular/core';
 
 @Component({
-<<<<<<< HEAD
   selector: 'app-home',
   standalone: true,
   template: `
     <div class="paddings-container">
       <div class="padding-section" routerLink="/cadastro" style="background-image: url('/assets/Cadastro.png')">
-        <h2>Vamos</h2>
+        <h2>Cadastro</h2>
       </div>
       <div class="padding-section" routerLink="/cardapio" style="background-image: url('/assets/Cardapio.jpeg')">
-        <h2>Fazer</h2>
+        <h2>Cardápio</h2>
       </div>
       <div class="padding-section" routerLink="/sobre-nos" style="background-image: url('/assets/img-sobrenos.jpeg')">
-        <h2>O cadastro lusquinhas (antes de quarta feira)</h2>
+        <h2>Sobre Nós</h2>
       </div>
     </div>
   `,
-=======
-  selector: 'app-cadastro',
-  standalone: true,
-  template: `<h1>Página de Cadastro</h1>`,
->>>>>>> e48320c739815a3dacc8aab3dc42f5ac4f4fc015
 })
-export class CadastroComponent {}
+export class HomeComponent {}
