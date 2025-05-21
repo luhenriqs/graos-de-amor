@@ -1,23 +1,58 @@
-.cardapio {
-    text-align: center;
-    padding: 2rem;
-  }
-  .produtos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  .produto {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 200px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .produto img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
+.cardapio-container {
+  display: flex;
+  flex-wrap: wrap; /* Garante que quebre linha se não couber */
+  justify-content: center; /* Centraliza os itens */
+  gap: 20px;
+  padding: 20px;
+}
+
+.produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.produto {
+  width: 200px;
+  height: 400px; /* Altura padronizada */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaço entre os elementos internos */
+  box-sizing: border-box;
+}
+
+/* Imagens padronizadas */
+.produto img {
+  max-height: 150px; /* Altura máxima fixa */
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Descrição com altura mínima para uniformizar */
+.produto p {
+  min-height: 40px; /* Ajuste conforme necessário */
+  margin: 10px 0;
+}
+
+/* Botão sempre no final */
+button {
+  margin-top: auto;
+  background-color: #795548;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #5d4037;
+}

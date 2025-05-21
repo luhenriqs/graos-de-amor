@@ -1,64 +1,27 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; 
+import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
   selector: 'app-cardapio',
-  standalone: true, // 
-  imports: [CommonModule], // 
   templateUrl: './cardapio.component.html',
   styleUrls: ['./cardapio.component.css']
 })
 export class CardapioComponent {
   produtos = [
-    { nome: 'Café Expresso', descricao: 'Café puro e intenso.', preco: 5.00, imagem: 'assets/Cardapio.jpeg' },
-    { nome: 'Café com Leite', descricao: 'Mistura suave e cremosa.', preco: 6.50, imagem: 'assets/Cardapio.jpeg' },
-    { nome: 'Café Gelado', descricao: 'Refrescante para os dias quentes.', preco: 7.00, imagem: 'assets/Cardapio.jpeg' }
+    { nome: 'Espresso', preco: 6.00, imagem: 'assets/cafe-expresso.png' },
+    { nome: 'Cappuccino', preco: 9.00, imagem: 'assets/cappuccino.png' },
+    { nome: 'Latte', preco: 8.00, imagem: 'assets/latte.png' },
+    { nome: 'Mocha', preco: 10.00, imagem: 'assets/mocha.png' },
+    { nome: 'Café Gelado', preco: 7.00, imagem: 'assets/cafe-gelado.png' },
+    { nome: 'Macchiato', preco: 7.50, imagem: 'assets/macchiato.png' }, 
+    { nome: 'Affogato', preco: 12.00, imagem: 'assets/affogato.png' },
+    { nome: 'Café com Canela', preco: 7.50, imagem: 'assets/cafe-canela.png' }
   ];
-}
 
+  constructor(private carrinhoService: CarrinhoService) {}
 
-export interface Produto {
-  id: number;
-  nome: string;
-  descricao: string;
-  preco: number;
-  imagem: string;
-}
-
-export const CARDAPIO: Produto[] = [
-  {
-    id: 1,
-    nome: 'Café Expresso',
-    descricao: 'Café forte e concentrado, servido em dose pequena.',
-    preco: 5.00,
-    imagem: 'assets/expresso.jpg',
-  },
-  {
-    id: 2,
-    nome: 'Cappuccino',
-    descricao: 'Mistura cremosa de café, leite vaporizado e espuma de leite.',
-    preco: 7.50,
-    imagem: 'assets/cappuccino.jpg',
-  },
-  {
-    id: 3,
-    nome: 'Mocha',
-    descricao: 'Café com leite, chocolate e chantilly por cima.',
-    preco: 8.00,
-    imagem: 'assets/mocha.jpg',
-  },
-  {
-    id: 4,
-    nome: 'Latte',
-    descricao: 'Café suave com bastante leite vaporizado.',
-    preco: 6.50,
-    imagem: 'assets/latte.jpg',
-  },
-  {
-    id: 5,
-    nome: 'Café Gelado',
-    descricao: 'Refrescante bebida de café com gelo e toque de baunilha.',
-    preco: 7.00,
-    imagem: 'assets/icedcoffee.jpg',
+  adicionarAoCarrinho(produto: any) {
+    this.carrinhoService.adicionarItem(produto);
+    alert(`${produto.nome} adicionado ao carrinho!`);
   }
-];
+}
